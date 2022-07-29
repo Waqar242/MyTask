@@ -1,0 +1,64 @@
+<mat-card class="myCard">
+  <div class="d-flex justify-content-between">
+    <h1 class="width50">Task Manager</h1>
+    <div class="mb-auto mt-auto">
+      <button mat-raised-button class="btn-success" [ngClass]="{'green' : !toggle1, 'red': toggle1}" (click)="addToggle()">{{addStatus}}</button>
+    </div>
+  </div>
+  <form [formGroup]="myGroup" (ngSubmit)="onSubmit()">
+    <mat-divider class="divider-class"></mat-divider>
+    <div *ngIf="add" fxLayoutGap="8px">
+      <div class="grid">
+        <mat-label class="input-item-label">Tasks</mat-label>
+        <mat-form-field appearance="outline">
+          <input
+          matInput 
+            type="text"
+            placeholder="Add Task"
+            class="w-100"
+            id="tasks" 
+            name="tasks" 
+            class="form-control" 
+            formControlName="tasks"
+          />
+        </mat-form-field>
+      </div>
+      <div class="grid"> 
+        <mat-label class="input-item-label">Day & Time</mat-label>
+        <mat-form-field appearance="outline">
+          <input
+          matInput 
+            type="text"
+            placeholder="Add Day & Time"
+            class="w-100"
+            id="date" 
+            name="date" 
+            class="form-control" 
+            formControlName="date"
+          />
+        </mat-form-field>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="space-between" >
+        <mat-label class="input-item-label">Set Reminder</mat-label>
+        <mat-checkbox class="example-margin" [(ngModel)]="checked" formControlName="checked" >Checked {{checked}}</mat-checkbox>
+      </div>
+      <div>
+        <button *ngIf="!toggle2" mat-raised-button type="submit" class="btn-save w-100">Save Task</button>
+      </div>
+    </div>
+    <mat-divider class="divider-class"></mat-divider>
+  </form>
+  <button *ngIf="toggle2" mat-raised-button class="btn-save w-100" (click)="updateTasks()">Update Task</button>
+  <div>
+    <div class="containerListItems" *ngFor=" let task of myTasks; let i = index">
+    <div class="four" *ngIf="task.reminder">Reminder</div>
+    <div class="one" [innerText]="task.tasks"></div>
+    <div class="two" [innerText]="task.date"></div>
+    <div class="three">
+        <button class="btn btn-primary" (click)="editTasks(i)">Edit</button> &nbsp; &nbsp;
+        <button class="btn btn-primary deletebtn" (click)="deleteTasks(i)">Delete X</button>
+    </div>
+  </div>
+  </div>
+</mat-card>
+

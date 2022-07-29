@@ -1,0 +1,124 @@
+
+.btn-danger {
+    color: #fff;
+    background-color: #dc3545!important;
+    border-color: #dc3545;
+}
+.btn-danger:hover{
+    color: #fff;
+    background-color: #bb2d3b!important;
+    border-color: #b02a37;
+}
+input:required:invalid {
+    border-left: 10px solid #a94442;
+  }
+
+  input:required:valid {
+    border-color: green;
+  }
+  input:invalid:focus {
+    border-color: red;
+  }
+
+  td {
+    border: none;
+}
+
+#secondTable table {
+    border: none;
+    color: white;
+    }
+    #secondTable td {
+    background: linear-gradient(to right, #0033FF, #3399FF);
+    color: white;
+    }
+    #secondTable th {
+    background-image: linear-gradient(to right, #FFCC00, yellow);
+    color: #0033FF;
+}
+.texts {
+  max-width: fit-content;
+}
+
+.myCard
+{
+  max-width: 650px;
+  margin: auto;
+  height: auto;
+  color: black;
+  background: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.myCard2
+{
+  max-width: 500px;
+  margin: auto;
+  height: auto;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.width50
+{
+  width: 50%;
+}
+.grid {
+  display: grid !important;
+  margin-top: 20px;
+  width: 100%;
+}
+.example-margin {
+  margin: 0 10px;
+}
+.divider-class {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: black;
+}
+.btn-close {
+  color: red;
+}
+.btn-save {
+  background-color: black;
+  color: antiquewhite;
+}
+#h1 {
+  color: antiquewhite;
+}
+.green {
+  background-color: green;
+}
+
+.red {
+  background-color: red;
+}
+.listButtons
+{
+  float: inline-end;
+}
+.containerListItems{
+  display: flex;
+}
+.one{
+  flex: 1;
+  padding: 10px;
+}
+.two{
+  flex: 1;
+  padding: 10px;
+}
+.three{
+  flex: 1;
+  padding: 10px;
+}
+.four{
+  flex: 1;
+  padding: 10px;
+  color: red;
+}
+.card {
+  background: #D3D3D3;
+  color: black;
+  margin-bottom: 10px;
+}
+
+
+
